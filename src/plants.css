@@ -1,0 +1,501 @@
+/* =========================
+   PLANT PARADISE - FINAL plants.css
+   Extra component polish / overrides / utility classes
+   Keep this AFTER style.css import
+   ========================= */
+
+/* Utility spacing */
+.home-page,
+.plants-page,
+.essentials-page,
+.contact-page,
+.care-guide-page,
+.cart-page,
+.wishlist-page,
+.orders-page {
+  display: block;
+}
+
+/* Smooth transitions */
+.product-card,
+.category-card,
+.feature-card,
+.care-card,
+.wishlist-card,
+.order-card,
+.glass-card,
+.btn,
+.icon-btn,
+.filter-btn,
+.thumb-btn,
+.quick-view-btn {
+  transition: all 0.28s ease;
+}
+
+/* Stronger glass feel on cards */
+.product-card,
+.category-card,
+.feature-card,
+.care-card,
+.wishlist-card,
+.order-card,
+.contact-info,
+.contact-form-box,
+.cart-summary,
+.auth-card,
+.protected-card,
+.review-card {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.045));
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    0 12px 34px rgba(0,0,0,0.24),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* Hover polish */
+.product-card:hover .product-image,
+.wishlist-card:hover .wishlist-image {
+  transform: scale(1.03);
+}
+
+.product-image,
+.wishlist-image,
+.modal-main-image,
+.thumb-btn img,
+.hero-image,
+.care-image {
+  transition: transform 0.35s ease;
+}
+
+.hero-visual:hover .hero-image,
+.care-extra-visual:hover .care-image {
+  transform: scale(1.02);
+}
+
+.product-image-wrap {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.product-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(4, 10, 7, 0.35), transparent 45%);
+  pointer-events: none;
+}
+
+/* Better button polish */
+.add-cart-btn,
+.wishlist-btn,
+.modal-close-btn,
+.icon-btn,
+.contact-socials a,
+.footer-socials a {
+  transition: all 0.25s ease;
+}
+
+.add-cart-btn:hover,
+.modal-close-btn:hover,
+.icon-btn:hover,
+.contact-socials a:hover,
+.footer-socials a:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+.wishlist-btn:hover {
+  background: rgba(248, 113, 113, 0.12);
+  border-color: rgba(248, 113, 113, 0.22);
+  color: #fecaca;
+}
+
+/* Section breathing */
+.products-section .section-head,
+.category-section .section-head,
+.why-choose-section .section-head,
+.care-guide-section .section-head,
+.related-products-section .section-head {
+  margin-bottom: 22px;
+}
+
+/* Category / feature polish */
+.category-card h3,
+.feature-card h3,
+.care-card h3 {
+  font-size: 1.08rem;
+}
+
+.category-card:hover .category-icon,
+.feature-card:hover .feature-icon,
+.care-card:hover .care-icon {
+  transform: scale(1.06);
+  background: rgba(74, 222, 128, 0.18);
+}
+
+/* Hero extra */
+.hero-section {
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: auto auto -120px -120px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(74, 222, 128, 0.06);
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-visual {
+  min-height: 100%;
+}
+
+/* Hero stats stronger look */
+.stat-box {
+  border: 1px solid rgba(255,255,255,0.1);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
+}
+
+/* Filter bar stronger polish */
+.filter-bar {
+  border-radius: 18px;
+}
+
+.filter-btn {
+  letter-spacing: 0.1px;
+}
+
+/* Product text polish */
+.product-title {
+  line-height: 1.35;
+}
+
+.product-description {
+  opacity: 0.95;
+}
+
+.product-bottom {
+  padding-top: 2px;
+}
+
+/* Quick view stronger visibility */
+.quick-view-btn {
+  box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+}
+
+.product-image-wrap:hover .quick-view-btn {
+  bottom: 18px;
+}
+
+/* Modal polish */
+.product-modal {
+  border-radius: 28px;
+}
+
+.modal-gallery,
+.modal-details {
+  min-width: 0;
+}
+
+.main-image-wrap {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.thumb-btn {
+  padding: 0;
+}
+
+.thumb-btn:hover img,
+.thumb-btn.active img {
+  transform: scale(1.05);
+}
+
+.modal-title {
+  line-height: 1.15;
+}
+
+.modal-action-row .btn {
+  min-width: 150px;
+  justify-content: center;
+}
+
+.review-card {
+  border-radius: 18px;
+}
+
+/* Related products inside modal smaller visual density */
+.related-products-grid .product-image {
+  height: 200px;
+}
+
+.related-products-grid .product-info {
+  padding: 14px;
+}
+
+.related-products-grid .product-title {
+  font-size: 1rem;
+}
+
+/* Contact page polish */
+.contact-info,
+.contact-form-box {
+  border-radius: 22px;
+}
+
+.contact-form-box .btn {
+  align-self: flex-start;
+}
+
+/* Auth polish */
+.auth-card,
+.protected-card {
+  border-radius: 26px;
+}
+
+.auth-card .hero-badge,
+.protected-card .hero-badge {
+  margin-bottom: 4px;
+}
+
+.auth-form .form-group input:focus,
+.contact-form input:focus,
+.contact-form textarea:focus,
+.footer-form input:focus,
+.newsletter-inline-form input:focus {
+  border-color: rgba(74, 222, 128, 0.32);
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.06);
+}
+
+/* Cart / orders polish */
+.cart-item,
+.order-card {
+  border-radius: 20px;
+}
+
+.cart-item-center h3,
+.order-top h3 {
+  line-height: 1.35;
+}
+
+.cart-line-total,
+.order-item-price {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.qty-box span {
+  min-width: 18px;
+  text-align: center;
+}
+
+.qty-box button:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+/* Wishlist polish */
+.wishlist-card {
+  border-radius: 22px;
+}
+
+.wishlist-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Empty states stronger */
+.empty-state {
+  border-radius: 24px;
+}
+
+.empty-state h2 {
+  margin: 8px 0;
+}
+
+/* Footer polish */
+.footer {
+  overflow: hidden;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(74, 222, 128, 0.05);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.footer-grid > * {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-links-col a:hover,
+.view-all-link:hover,
+.auth-switch-text a:hover {
+  color: #ffffff;
+}
+
+.footer-form input,
+.newsletter-inline-form input {
+  min-width: 220px;
+}
+
+/* Navbar polish */
+.navbar {
+  overflow: hidden;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255,255,255,0.02), transparent 35%, rgba(255,255,255,0.02));
+  pointer-events: none;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+}
+
+.user-pill {
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Page hero consistency */
+.page-hero {
+  padding: 24px 28px;
+}
+
+.page-hero .hero-badge {
+  margin-bottom: 2px;
+}
+
+/* Newsletter section */
+.newsletter-highlight {
+  overflow: hidden;
+  position: relative;
+}
+
+.newsletter-highlight::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(74, 222, 128, 0.05);
+  bottom: -80px;
+  right: -60px;
+  filter: blur(10px);
+}
+
+/* Tiny utility */
+.order-item-info p,
+.wishlist-price,
+.cart-item-price,
+.order-date {
+  color: #cfe5d8;
+}
+
+/* Responsive polish */
+@media (max-width: 980px) {
+  .navbar {
+    padding: 14px 16px;
+  }
+
+  .auth-actions {
+    width: 100%;
+  }
+
+  .auth-actions .btn,
+  .auth-actions .user-pill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    width: fit-content;
+  }
+
+  .hero-stats {
+    width: 100%;
+  }
+
+  .stat-box {
+    flex: 1 1 140px;
+  }
+
+  .contact-form-box .btn {
+    align-self: stretch;
+    justify-content: center;
+  }
+
+  .related-products-grid .product-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-badge {
+    font-size: 0.82rem;
+  }
+
+  .navbar-shell {
+    padding: 10px 10px 0;
+  }
+
+  .navbar {
+    border-radius: 18px;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .product-info,
+  .wishlist-content,
+  .cart-summary,
+  .cart-item,
+  .order-card,
+  .contact-info,
+  .contact-form-box {
+    padding: 16px;
+  }
+
+  .quick-view-btn {
+    opacity: 1;
+    bottom: 12px;
+    font-size: 0.85rem;
+    padding: 9px 12px;
+  }
+
+  .footer-form input,
+  .newsletter-inline-form input {
+    min-width: 100%;
+  }
+
+  .modal-close-btn {
+    top: 10px;
+    right: 10px;
+  }
+}
